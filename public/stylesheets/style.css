@@ -1,4 +1,7 @@
 #container{
-	max-width:1000px;
+	width:600px;
+	height:600px;
 	margin:30px auto;
+	background-image:url('/images/board.png');
+	background-size: cover;
 }
