@@ -10,10 +10,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/board', function(req, res, next) {
 	res.json(board);
-});)
+});
 
 router.get('/setMove', function(req, res, next) {
-  res.json({log:'game cleared'});
+  res.json({log:'move made'});
 });
 
 router.get('/newGame', function(req, res, next) {
