@@ -13,6 +13,13 @@ router.get('/board', function(req, res, next) {
 });
 
 router.get('/setMove', function(req, res, next) {
+	var slot = req.query.slotId;
+	var player = req.query.playerId;
+
+	console.log(slot + " " + player + " " + board)
+
+	board[slot] = parseInt(player);
+
   res.json({log:'move made'});
 });
 
