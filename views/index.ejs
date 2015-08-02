@@ -4,12 +4,16 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
+    <script src="javascripts/jquery.min.js"></script>
     <script src="javascripts/react-with-addons.js"></script>
     <script src="javascripts/JSXTransformer.js"></script>
   </head>
   <body>
   	<div id="container">
     	<div id="example"></div>
+    	<script>
+    		var PLAYERID = <%= playerId %>;
+    	</script>
 	    <script src="javascripts/game.jsx" type="text/jsx"></script>
     </div>
   </body>

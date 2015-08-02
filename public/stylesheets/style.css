@@ -1,7 +1,40 @@
+html{
+	font-family: Arial;
+}
+
 #container{
 	width:600px;
 	height:600px;
 	margin:30px auto;
 	background-image:url('/images/board.png');
 	background-size: cover;
+}
+
+#board-list{
+	list-style-type:none;
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	overflow:hidden;
+}
+
+#board-list li{
+	float:left;
+	width:200px;
+	height:200px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 200px;
+	font-size:80px;
+}
+
+.new-game{
+	text-align: center;
+  display: block;
+  margin: 20px 0;
+  text-decoration: none;
+  color: #000;
+}
+
+.new-game:hover{
+	text-decoration: underline;
 }

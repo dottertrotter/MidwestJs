@@ -5,7 +5,11 @@ var board = [0,0,0,0,0,0,0,0,0];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Tic Tac Toe' });
+	if(!req.query.playerId){
+		req.query.playerId = 1;
+	}
+
+  res.render('index', { title: 'Tic Tac Toe', playerId: req.query.playerId });
 });
 
 router.get('/board', function(req, res, next) {
@@ -15,8 +19,6 @@ router.get('/board', function(req, res, next) {
 router.get('/setMove', function(req, res, next) {
 	var slot = req.query.slotId;
 	var player = req.query.playerId;
-
-	console.log(slot + " " + player + " " + board)
 
 	board[slot] = parseInt(player);
 
