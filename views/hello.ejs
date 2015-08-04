@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/react-with-addons.js"></script>
+    <script src="/javascripts/JSXTransformer.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/examples.css' />
+  </head>
+  <body>
+    <div id="example"></div>
+
+    <a class="resource-link" href="http://facebook.github.io/react/docs/getting-started.html">Code from http://facebook.github.io/react/docs/getting-started.html</a>
+    <script type="text/jsx">
+      React.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
