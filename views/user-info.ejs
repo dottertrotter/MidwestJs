@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/react-with-addons.js"></script>
+    <script src="/javascripts/JSXTransformer.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/examples.css' />
+  </head>
+  <body>
+    <div id="example"></div>
+
+    <script type="text/jsx">
+      var UserInfo = React.createClass({
+				render: function() {
+			    var title = "";
+			    if(this.props.user){
+			      title = <h1>{this.props.user.firstName} {this.props.user.lastName}</h1> 
+			    }
+					return (
+						<div class="entry">
+			        {title}
+			      </div>  
+					);
+				}
+			});
+
+      React.render(
+      	<div>
+        	<UserInfo user={{firstName: "Brad", lastName:"Marsh"}} /><br />
+        	<UserInfo />
+        </div>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
